@@ -12,6 +12,10 @@ namespace Sesion17G3.Servicios
     {
         List<Producto> productos = new List<Producto>();
 
+        public List<Producto> Productos() {
+            return productos;
+        }
+
 
         public void AgregarProducto(Producto producto)
         {
@@ -21,6 +25,7 @@ namespace Sesion17G3.Servicios
         public Producto BuscarProducto(Producto producto)
         {
             return productos.Find(prod => prod.ID == producto.ID);
+
         }
 
         public void EliminarProducto(Producto producto)
